@@ -14,7 +14,8 @@ define('URLROOT', 'http://localhost/php/25_mvc_from_core');
 // Site name 
 define('SITENAME', 'From Core');
 
-
+//app version
+define("APPVERSION", "1.0.0");
 // need to change .htaccess in public
 // RewriteBase /__YOUR_SITE_DIR__/public
 // replace  __YOUR_SITE_DIR__ with root dir name of your site 
