@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../14-A-deckCards" beforeDir="false" afterPath="$PROJECT_DIR$/../14-A-deckCards" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15-A-forma_ir_validacija" beforeDir="false" afterPath="$PROJECT_DIR$/../15-A-forma_ir_validacija" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16-MARIUS-FORMOS-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../16-MARIUS-FORMOS-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16-praktika" beforeDir="false" afterPath="$PROJECT_DIR$/../16-praktika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17-M-forms_validation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../17-M-forms_validation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18-A-login" beforeDir="false" afterPath="$PROJECT_DIR$/../18-A-login" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18-A-register_form/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../18-A-register_form/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18-A-register_form/inc/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/../18-A-register_form/inc/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18-M-cookies" beforeDir="false" afterPath="$PROJECT_DIR$/../18-M-cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/fetchProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/fetchProcess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../19-A-Nuotraukos-JS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19-M-OOP_START" beforeDir="false" afterPath="$PROJECT_DIR$/../19-M-OOP_START" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/Class/VendingMachine.php" beforeDir="false" afterPath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/Class/VendingMachine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../20-A-OOP-VendingMachine/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-M-OOP-Freelancer_Worker" beforeDir="false" afterPath="$PROJECT_DIR$/../20-M-OOP-Freelancer_Worker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-nuotraukos-JS/.idea/20-nuotraukos-JS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-nuotraukos-JS/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-nuotraukos-JS/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20-nuotraukos-JS/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21-A-Vaiko vardas ir lytis/Abstract.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21-A-Vaiko vardas ir lytis/Child.php" beforeDir="false" afterPath="$PROJECT_DIR$/../21-A-Vaiko vardas ir lytis/Child.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../21-A-Vaiko vardas ir lytis/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../21-A-Vaiko vardas ir lytis/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/Assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/Assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/Classes/GameMatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/Classes/GameMatch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/Classes/Player.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/Classes/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/Classes/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/Classes/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/const/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/const/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/functions/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/functions/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22-A-OOP-praktines/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../22-A-OOP-praktines/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../23-M-DB_Start/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../23-M-DB_Start/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24-M-blog/Classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/Classes/DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../24-M-blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LoginPHP (1)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../our_first_mvc" beforeDir="false" afterPath="$PROJECT_DIR$/../our_first_mvc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1neCJFu1fJHRrAXZVE87mJnqCiC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="" />
+      <created>1611741095887</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611741095887</updated>
+      <workItem from="1611741096979" duration="1882000" />
+      <workItem from="1611813602442" duration="7878000" />
+    </task>
+    <task id="LOCAL−00001" summary="config file with our details. user sql">
+      <created>1611815373139</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1611815373139</updated>
+    </task>
+    <task id="LOCAL−00002" summary="added bootstrap 4 and font awesome 4.7">
+      <created>1611815419008</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1611815419008</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="config file with our details. user sql" />
+    <MESSAGE value="added bootstrap 4 and font awesome 4.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bootstrap 4 and font awesome 4.7" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="827" y="-977" key="CommitChangelistDialog2" timestamp="1611815418400">
+      <screen x="531" y="-1080" width="1920" height="999" />
+    </state>
+    <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815418400" />
+    <state x="982" y="-829" key="FileChooserDialogImpl" timestamp="1611815326597">
+      <screen x="531" y="-1080" width="1920" height="999" />
+    </state>
+    <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815326597" />
+    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611741234559" />
+    <state x="1010" y="-631" key="NewPhpFileDialog" timestamp="1611822266746">
+      <screen x="531" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611822266746" />
+    <state x="1010" y="-649" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611818422683" />
+    <state x="865" y="-854" width="672" height="678" key="search.everywhere.popup" timestamp="1611815788265">
+      <screen x="531" y="-1080" width="1920" height="999" />
+    </state>
+    <state x="865" y="-854" width="672" height="678" key="search.everywhere.popup/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815788265" />
+  </component>
+</project>
