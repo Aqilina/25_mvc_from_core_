@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="card card-body bg-light mt-5">
+                <?php flash('register_fail') ?>
                 <h2>Create an account</h2>
                 <p>Please fill in the form to register with us</p>
                 <form action="" method="post">
