@@ -25,7 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="">
+    <list default="true" id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="added bootstrap 4 and font awesome 4.7">
       <change beforePath="$PROJECT_DIR$/../14-A-deckCards" beforeDir="false" afterPath="$PROJECT_DIR$/../14-A-deckCards" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../15-A-forma_ir_validacija" beforeDir="false" afterPath="$PROJECT_DIR$/../15-A-forma_ir_validacija" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../16-MARIUS-FORMOS-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../16-MARIUS-FORMOS-1/.idea/workspace.xml" afterDir="false" />
@@ -64,9 +64,11 @@
       <change beforePath="$PROJECT_DIR$/../23-M-DB_Start/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../23-M-DB_Start/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../24-M-blog/Classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/Classes/DB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../24-M-blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LoginPHP (1)" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../our_first_mvc" beforeDir="false" afterPath="$PROJECT_DIR$/../our_first_mvc" afterDir="false" />
@@ -106,7 +108,10 @@
       <option name="presentableId" value="Default" />
       <updated>1611741095887</updated>
       <workItem from="1611741096979" duration="1882000" />
-      <workItem from="1611813602442" duration="7878000" />
+      <workItem from="1611813602442" duration="12060000" />
+      <workItem from="1611839651402" duration="1705000" />
+      <workItem from="1611872570356" duration="148000" />
+      <workItem from="1611899814341" duration="6029000" />
     </task>
     <task id="LOCAL−00001" summary="config file with our details. user sql">
       <created>1611815373139</created>
@@ -120,7 +125,73 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1611815419008</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="navbar created">
+      <created>1611822562734</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1611822562734</updated>
+    </task>
+    <task id="LOCAL−00004" summary="added description fields in data">
+      <created>1611822608822</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1611822608823</updated>
+    </task>
+    <task id="LOCAL−00005" summary="app version">
+      <created>1611822627795</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1611822627795</updated>
+    </task>
+    <task id="LOCAL−00006" summary="nice bootstrap view">
+      <created>1611822652215</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1611822652215</updated>
+    </task>
+    <task id="LOCAL−00007" summary="about and index pages">
+      <created>1611822709600</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1611822709600</updated>
+    </task>
+    <task id="LOCAL−00008" summary="header with bootstrap and fontawesome with defer js">
+      <created>1611822741576</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1611822741576</updated>
+    </task>
+    <task id="LOCAL−00009" summary="other">
+      <created>1611822780055</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1611822780055</updated>
+    </task>
+    <task id="LOCAL−00010" summary="other">
+      <created>1611822800206</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1611822800206</updated>
+    </task>
+    <task id="LOCAL−00011" summary="started the User model class">
+      <created>1611900800777</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1611900800777</updated>
+    </task>
+    <task id="LOCAL−00012" summary="created fn findUserByEmail and used it to test">
+      <created>1611903495045</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1611903495045</updated>
+    </task>
+    <task id="LOCAL−00013" summary="fix typo errors">
+      <created>1611903558265</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1611903558265</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,27 +219,49 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="config file with our details. user sql" />
     <MESSAGE value="added bootstrap 4 and font awesome 4.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="added bootstrap 4 and font awesome 4.7" />
+    <MESSAGE value="navbar created" />
+    <MESSAGE value="added description fields in data" />
+    <MESSAGE value="app version" />
+    <MESSAGE value="nice bootstrap view" />
+    <MESSAGE value="about and index pages" />
+    <MESSAGE value="header with bootstrap and fontawesome with defer js" />
+    <MESSAGE value="other" />
+    <MESSAGE value="started the User model class" />
+    <MESSAGE value="created fn findUserByEmail and used it to test" />
+    <MESSAGE value="fix typo errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix typo errors" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="827" y="-977" key="CommitChangelistDialog2" timestamp="1611815418400">
+    <state x="827" y="-977" key="CommitChangelistDialog2" timestamp="1611903557654">
       <screen x="531" y="-1080" width="1920" height="999" />
     </state>
-    <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815418400" />
-    <state x="982" y="-829" key="FileChooserDialogImpl" timestamp="1611815326597">
+    <state x="969" y="-870" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611822799685" />
+    <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611903557654" />
+    <state x="631" y="-976" width="1354" height="799" key="DiffContextDialog" timestamp="1611903550443">
       <screen x="531" y="-1080" width="1920" height="999" />
     </state>
-    <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815326597" />
-    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611741234559" />
-    <state x="1010" y="-631" key="NewPhpFileDialog" timestamp="1611822266746">
+    <state x="631" y="-972" width="1354" height="799" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611826690560" />
+    <state x="631" y="-976" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611903550443" />
+    <state x="982" y="-819" key="FileChooserDialogImpl" timestamp="1611826689135">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
+    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611826689135" />
+    <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815326597" />
+    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611741234559" />
+    <state x="1010" y="-649" key="NewPhpFileDialog" timestamp="1611906019138">
+      <screen x="531" y="-1080" width="1920" height="999" />
+    </state>
     <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611822266746" />
-    <state x="1010" y="-649" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611818422683" />
+    <state x="1010" y="-649" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611906019138" />
+    <state x="783" y="-325" key="run.anything.popup" timestamp="1611905229490">
+      <screen x="531" y="-1080" width="1920" height="999" />
+    </state>
+    <state x="783" y="-325" key="run.anything.popup/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611905229490" />
     <state x="865" y="-854" width="672" height="678" key="search.everywhere.popup" timestamp="1611815788265">
       <screen x="531" y="-1080" width="1920" height="999" />
     </state>
