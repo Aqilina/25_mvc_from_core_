@@ -88,10 +88,11 @@ class Users extends Controller
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
                 //CREATE USER
-                if($this->userModel->register($data)) {
+
+                if ($this->userModel->register($data)) {
                     //success - user added
                     //set flash message
-                    flash('register_success', 'Your registrations is successful');
+                    flash('register_success', 'You have registered successfully');
 //                    header("Location: " . URLROOT. "/users/login");
                     redirect('/users/login'); //sita f-ja helperiuose
                 } else {
@@ -99,7 +100,7 @@ class Users extends Controller
                 }
             } else {
                 //set flash msg
-                flash('register_fail', 'Please check the form', 'alert alert-danger');
+                flash('register_fail', 'please check the form', 'alert alert-danger');
                 // load view with errors
                 $this->view('users/register', $data);
             }
@@ -129,7 +130,57 @@ class Users extends Controller
         // echo 'Login in progress';
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // form process in progress
+
+            //sanitize post array
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            // create data
+            $data = [
+                'email'     => trim($_POST['email']),
+                'password'  => trim($_POST['password']),
+                'emailErr'     => '',
+                'passwordErr'  => '',
+            ];
+
+//            validate email
+            if (empty($data['email'])) {
+                $data['emailErr'] = 'Please enter your email';
+            } else {
+                //check if we have this email is our user table DB
+                if ($this->userModel->findUserByEmail($data['email'])) {
+                    //user found
+                } else {
+                    $data['emailErr'] = "User doesn't exist";
+                }
+            }
+
+            //validate password
+            if (empty($data['password'])) {
+                $data['passwordErr'] = 'Please enter your password';
+            }
+
+//     ---------------------------------------------------------------------------------------------
+            //check if we have errors
+            if (empty($data['emailErr']) && empty($data['passwordErr'])) {
+                //no errors
+                //email wa found and password entered
+                $loggedInUser = $this->userModel->login($data['email'], $data['password']);
+
+                if ($loggedInUser) {
+                    //CREATE SESSION
+                    //password match
+                } else {
+                    $data['passwordErr'] = 'Wrong password or email';
+                    //load view with error
+                    $this->view('user/login', $data);
+                }
+//                die('SUCCESS');
+            } else {
+                //load view with errors
+                $this->view('users/login', $data);
+            }
         } else {
+
+            //if we go to users/login by url or link, or btn
             // load form
             // echo 'load form';
 
