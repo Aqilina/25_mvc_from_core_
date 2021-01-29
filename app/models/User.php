@@ -34,7 +34,6 @@ class User
 
     //REGISTER USER WITH GIVEN SANITIZED DATA
 //    @return boolean
-
     public function register($data)
     {
         //prepare statement
