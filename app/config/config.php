@@ -1,8 +1,8 @@
 <?php
 // DB Params
 define('DB_HOST', 'localhost');
-define('DB_USER', '_YOUR_DB_USER_');
-define('DB_PASS', '_YOUR_DB_PASS_');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', '25_mvc_from_core');
 
 // aprrot wil be used when we need absloute path to our app dir
