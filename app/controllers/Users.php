@@ -76,7 +76,7 @@ class Users extends Controller
 
 
 
-            // if there is no erros
+            // IF THERE ARE NO ERRORS
             if (empty($data['nameErr']) && empty($data['emailErr']) && empty($data['passwordErr']) && empty($data['confirmPasswordErr'])) {
                 // there are no errors;
 //                die('SUCCESS');
@@ -90,12 +90,16 @@ class Users extends Controller
                 //CREATE USER
                 if($this->userModel->register($data)) {
                     //success - user added
+                    //set flash message
+                    flash('register_success', 'Your registrations is successful');
 //                    header("Location: " . URLROOT. "/users/login");
                     redirect('/users/login'); //sita f-ja helperiuose
                 } else {
                     die('Something went wrong in adding user in db');
                 }
             } else {
+                //set flash msg
+                flash('register_fail', 'Please check the form', 'alert alert-danger');
                 // load view with errors
                 $this->view('users/register', $data);
             }
