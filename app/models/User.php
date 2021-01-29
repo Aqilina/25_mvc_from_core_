@@ -30,8 +30,27 @@ class User
         } else {
             return false;
         }
+    }
 
+    //REGISTER USER WITH GIVEN SANITIZED DATA
+//    @return boolean
 
+    public function register($data)
+    {
+        //prepare statement
+        $this->db->query("INSERT INTO users (`name`, `email`, `password`) VALUES(:name, :email, :password)");
 
+        //bind values
+        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':email', $data['email']);
+        //(password is hashed):
+        $this->db->bind(':password', $data['password']);
+
+        //make query
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
