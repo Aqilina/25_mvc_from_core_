@@ -51,7 +51,7 @@ class Users extends Controller
                 } else {
 //                    check if email already exists
                     if ($this->userModel->findUserByEmail($data['email'])) {
-                        $data['emailErr'] = 'Email is already taken';
+                        $data['emailErr'] = "Email already taken";
                     }
                 }
             }
@@ -96,7 +96,7 @@ class Users extends Controller
 //                    header("Location: " . URLROOT. "/users/login");
                     redirect('/users/login'); //sita f-ja helperiuose
                 } else {
-                    die('Something went wrong in adding user in db');
+                    die('Something went wrong in adding user to db');
                 }
             } else {
                 //set flash msg
@@ -149,7 +149,7 @@ class Users extends Controller
                 if ($this->userModel->findUserByEmail($data['email'])) {
                     //user found
                 } else {
-                    $data['emailErr'] = "User doesn't exist";
+                    $data['emailErr'] = 'User does not exist';
                 }
             }
 
@@ -167,8 +167,16 @@ class Users extends Controller
 
                 if ($loggedInUser) {
                     //CREATE SESSION
+
+
+
+
+
+
                     //password match
-                    die('Email and pass match start session immediately');
+//                    die('Email and pass match start session immediately');
+
+                    $this->createUserSession($loggedInUser);
                 } else {
                     $data['passwordErr'] = 'Wrong password or email';
                     //load view with error
@@ -196,5 +204,15 @@ class Users extends Controller
             // load view
             $this->view('users/login', $data);
         }
+    }
+
+
+        //if we have user, we save its data in session
+    public function createUserSession($userRow) {
+        $_SESSION['user_id'] = $userRow->id;
+        $_SESSION['user_email'] = $userRow->email;
+        $_SESSION['user_name'] = $userRow->name;
+
+        redirect('/pages/index');
     }
 }
