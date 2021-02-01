@@ -32,3 +32,21 @@ function flash($name = '', $message = '', $class = 'alert alert-success')
         }
     }
 }
+
+//checks if user is logged in
+//@returns boolean
+function isLoggedIn()
+{
+    //OLD WAY
+//    if (isset($_SESSION['user_id'])) {
+//        return true;
+//    } else {
+//        return false;
+//    }
+//
+
+//NEW WAY
+    if (isset($_SESSION['user_id'])) return true;
+    return false;
+
+    }
