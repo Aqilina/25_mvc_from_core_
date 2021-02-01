@@ -11,8 +11,15 @@
         </div>
 
         <div class="navbar-nav ml-auto">
+<!--            show when not logged in-->
+            <?php if (!isLoggedIn()) : ?>
             <a class="nav-link" href="<?php echo URLROOT ?>/users/register">Register</a>
             <a class="nav-link" href="<?php echo URLROOT ?>/users/login">Login</a>
+            <?php else : ?>
+<!--            show when logged in-->
+            <a class="nav-link" href="<?php echo URLROOT ?>/users/logout">Logout</a>
+            <?php endif; ?>
+
         </div>
     </div>
     </div>
