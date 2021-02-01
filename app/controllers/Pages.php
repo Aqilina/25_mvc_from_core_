@@ -9,6 +9,9 @@ class Pages extends Controller
 
     public function index()
     {
+        //if user is logged in we redirect
+        if (isLoggedIn()) redirect('/posts');
+
         // create some data to load into vie
         $data = [
             'title' => 'Welcome to ' . SITENAME,
