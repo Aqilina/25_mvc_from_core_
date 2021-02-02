@@ -32,7 +32,8 @@ class Post
         return $result;
     }
 
-    public function addPost($data) {
+    public function addPost($data)
+    {
         //prepare statement
         $this->db->query("INSERT INTO posts (`title`, `body`, `user_id`) VALUES(:title, :body, :user_id)");
 
@@ -66,7 +67,8 @@ class Post
 
     }
 
-    public function updatePost($data) {
+    public function updatePost($data)
+    {
         //prepare statement
         $this->db->query("UPDATE posts SET title = :title, body = :body WHERE id = :post_id");
 
@@ -74,6 +76,23 @@ class Post
         $this->db->bind(':title', $data['title']);
         $this->db->bind(':body', $data['body']);
         $this->db->bind(':post_id', $data['post_id']);
+
+
+        //make query
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function deletePost($id)
+    {
+        $this->db->query("DELETE FROM posts WHERE id = :post_id");
+
+        //bind values
+        $this->db->bind(':post_id', $id);
 
 
         //make query
