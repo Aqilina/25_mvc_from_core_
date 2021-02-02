@@ -1,5 +1,5 @@
 <?php
-// Pages class responsible for controlin Pages
+// Pages class responsible for controling Pages
 class Pages extends Controller
 {
     public function __construct()
@@ -11,6 +11,7 @@ class Pages extends Controller
     {
         //if user is logged in we redirect
         if (isLoggedIn()) redirect('/posts');
+
 
         // create some data to load into vie
         $data = [
