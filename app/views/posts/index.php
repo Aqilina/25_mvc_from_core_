@@ -2,10 +2,14 @@
 require APPROOT . '/views/inc/header.php';
 ?>
 
+
+
 <div class="row m">
+    <?php echo  flash('post_message'); ?>
     <div class="col">
         <h1>Posts</h1>
     </div>
+
     <div class="col">
         <a href="<?php echo URLROOT; ?>/posts/add" class="btn btn-primary pull-right mt-2">
             <i class="fa fa-pencil"></i>
