@@ -79,7 +79,17 @@ class Posts extends Controller
 
             $this->view('posts/add', $data);
         }
+    }
+
+    public function show($id= null)
+    {
+//        if didnt find id - redirect to posts controller
+        if ($id === null) redirect('/posts');
 
 
+        $data = [
+            'post_id' => $id
+        ];
+        $this->view('posts/show', $data);
     }
 }
