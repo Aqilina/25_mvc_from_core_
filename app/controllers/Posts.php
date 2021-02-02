@@ -11,7 +11,8 @@ class Posts extends Controller
     private $postModel;
     private $userModel;
 
-    public function __construct() {
+    public function __construct()
+    {
         //restrict access of this controller only to logged in users
         if (!isLoggedIn()) redirect('/users/login');
 
@@ -83,7 +84,7 @@ class Posts extends Controller
         }
     }
 
-    public function show($id= null)
+    public function show($id = null)
     {
 //        if didnt find id - redirect to posts controller
         if ($id === null) redirect('/posts');
@@ -102,10 +103,10 @@ class Posts extends Controller
     }
 
 
-    public function edit($id=null)
+    public function edit($id = null)
     {
         //if post has no such parameter, we redirect
-        if ($id=== null) redirect('/posts');
+        if ($id === null) redirect('/posts');
 
         //if form was submitted
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -166,6 +167,20 @@ class Posts extends Controller
             ];
 
             $this->view('posts/edit', $data);
+        }
+    }
+
+    public function delete($id=null)
+    {
+        $vld = new Validation();
+        if ($vld->ifRequestIsPost() && $id) {
+//            die('will be deleted soon');
+            if ($this->postModel->deletePost($id)) {
+                flash('post_message', 'post was deleted', 'alert alert-warning' );
+                redirect('/posts');
+            }
+        } else {
+            redirect('/posts');
         }
     }
 }
