@@ -49,4 +49,20 @@ class Post
             return false;
         }
     }
+
+    //will return post row if found
+    //will return false if not found
+    public function getPostById($id)
+    {
+        $this->db->query("SELECT * FROM posts WHERE id = :id");
+        $this->db->bind(':id', $id);
+
+        $row = $this->db->singleRow();
+
+        if ($this->db->rowCount() > 0) {
+            return $row;
+        }
+        return false;
+
+    }
 }
