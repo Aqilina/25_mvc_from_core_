@@ -9,12 +9,14 @@
 class Posts extends Controller
 {
     private $postModel;
+    private $userModel;
 
     public function __construct() {
         //restrict access of this controller only to logged in users
         if (!isLoggedIn()) redirect('/users/login');
 
         $this->postModel = $this->model('Post');
+        $this->userModel = $this->model('User');
     }
 
     public function index()
@@ -86,9 +88,15 @@ class Posts extends Controller
 //        if didnt find id - redirect to posts controller
         if ($id === null) redirect('/posts');
 
+//        get post row
+        $post = $this->postModel->getPostById($id);
+        //get user data by user id
+        $user = $this->userModel->getUserById($post->user_id);
 
+        //create data for the view and add post data
         $data = [
-            'post_id' => $id
+            'post' => $post,
+            'user' => $user
         ];
         $this->view('posts/show', $data);
     }
