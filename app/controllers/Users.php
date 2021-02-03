@@ -8,22 +8,18 @@
 class Users extends Controller //from libraries
 {
     private $userModel;
+    private $vld;
 
 
     public function __construct()
     {
         $this->userModel = $this->model('User');
-
+        $this->vld = new Validation();
     }
 
     public function register()
     {
-        // echo 'Register in progress';
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // form process in progress
-
-            // sanitize Post Array
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if ($this->vld->ifRequestIsPostAndSanitize()) {
 
             // create data
             $data = [
@@ -132,12 +128,9 @@ class Users extends Controller //from libraries
 
     public function login()
     {
-        // echo 'Login in progress';
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($this->vld->ifRequestIsPostAndSanitize()) {
             // form process in progress
 
-            //sanitize post array
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             // create data
             $data = [
                 'email'     => trim($_POST['email']),
@@ -173,8 +166,6 @@ class Users extends Controller //from libraries
 
                 if ($loggedInUser) {
                     //CREATE SESSION
-
-
 
 
 
