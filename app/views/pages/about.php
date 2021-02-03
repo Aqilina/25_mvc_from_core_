@@ -1,4 +1,5 @@
 <?php
+$currentPage = 'about';
 require APPROOT . '/views/inc/header.php';
 ?>
 

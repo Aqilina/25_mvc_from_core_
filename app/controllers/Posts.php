@@ -6,7 +6,7 @@
 *
 */
 
-class Posts extends Controller
+class Posts extends Controller //from libraries
 {
     private $postModel;
     private $userModel;
@@ -26,7 +26,8 @@ class Posts extends Controller
         //get posts
         $posts = $this->postModel->getPosts();
         $data = [
-            'posts' => $posts
+            'posts' => $posts,
+            'currentPage' => 'home'
         ];
         $this->view('posts/index', $data);
     }
@@ -97,7 +98,8 @@ class Posts extends Controller
         //create data for the view and add post data
         $data = [
             'post' => $post,
-            'user' => $user
+            'user' => $user,
+            'currentPage' => 'show'
         ];
         $this->view('posts/show', $data);
     }
