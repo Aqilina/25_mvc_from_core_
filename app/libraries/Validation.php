@@ -10,4 +10,16 @@ class Validation
         if ($_SERVER['REQUEST_METHOD'] === 'POST') return true;
         return false;
     }
+
+    public function sanitizePost() {
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+    }
+
+    public function ifRequestIsPostAndSanitize() {
+        if ($this->ifRequestIsPost()) {
+            $this->sanitizePost();
+            return true;
+        }
+        return false;
+    }
 }
