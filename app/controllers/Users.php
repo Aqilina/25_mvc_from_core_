@@ -27,30 +27,32 @@ class Users extends Controller //from libraries
                 'email'     => trim($_POST['email']),
                 'password'  => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
-                'nameErr'      => '',
-                'emailErr'     => '',
-                'passwordErr'  => '',
-                'confirmPasswordErr' => '',
-                'currentPage' => 'register',
+
+                'errors' => [
+                    'nameErr'      => '',
+                    'emailErr'     => '',
+                    'passwordErr'  => '',
+                    'confirmPasswordErr' => '',
+                ],
             ];
 
             // Validate Name
             if (empty($data['name'])) {
                 // empty field
-                $data['nameErr'] = "Please enter Your Name";
+                $data['errors']['nameErr'] = "Please enter Your Name";
             }
 
             // Validate Email
             if (empty($data['email'])) {
                 // empty field
-                $data['emailErr'] = "Please enter Your Email";
+                $data['errors']['emailErr'] = "Please enter Your Email";
             } else {
                 if (filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
-                    $data['emailErr'] = "Please check your email";
+                    $data['errors']['emailErr'] = "Please check your email";
                 } else {
 //                    check if email already exists
                     if ($this->userModel->findUserByEmail($data['email'])) {
-                        $data['emailErr'] = "Email already taken";
+                        $data['errors']['emailErr'] = "Email already taken";
                     }
                 }
             }
@@ -58,25 +60,25 @@ class Users extends Controller //from libraries
             // Validate Password
             if (empty($data['password'])) {
                 // empty field
-                $data['passwordErr'] = "Please enter a password";
+                $data['errors']['passwordErr'] = "Please enter a password";
             } elseif (strlen($data['password']) < 6) {
-                $data['passwordErr'] = "Password must be 6 or more characters";
+                $data['errors']['passwordErr'] = "Password must be 6 or more characters";
             }
 
             // Validate confirmPassword
             if (empty($data['confirmPassword'])) {
                 // empty field
-                $data['confirmPasswordErr'] = "Please repeat password";
+                $data['errors']['confirmPasswordErr'] = "Please repeat password";
             } else {
                 if ($data['confirmPassword'] !== $data['password']) {
-                    $data['confirmPasswordErr'] = "Password must match";
+                    $data['errors']['confirmPasswordErr'] = "Password must match";
                 }
             }
 
 
 
             // IF THERE ARE NO ERRORS
-            if (empty($data['nameErr']) && empty($data['emailErr']) && empty($data['passwordErr']) && empty($data['confirmPasswordErr'])) {
+            if (empty($data['errors']['nameErr']) && empty($data['errors']['emailErr']) && empty($data['errors']['passwordErr']) && empty($data['errors']['confirmPasswordErr'])) {
                 // there are no errors;
 //                die('SUCCESS');
 
@@ -114,10 +116,14 @@ class Users extends Controller //from libraries
                 'email'     => '',
                 'password'  => '',
                 'confirmPassword' => '',
-                'nameErr'      => '',
-                'emailErr'     => '',
-                'passwordErr'  => '',
-                'confirmPasswordErr' => '',
+
+                'errors' => [
+                    'nameErr'      => '',
+                    'emailErr'     => '',
+                    'passwordErr'  => '',
+                    'confirmPasswordErr' => '',
+                ],
+
                 'currentPage' => 'register',
             ];
 
@@ -166,14 +172,10 @@ class Users extends Controller //from libraries
 
                 if ($loggedInUser) {
                     //CREATE SESSION
-
-
-
+                    $this->createUserSession($loggedInUser);
 
                     //password match
 //                    die('Email and pass match start session immediately');
-
-                    $this->createUserSession($loggedInUser);
                 } else {
                     $data['passwordErr'] = 'Wrong password or email';
                     //load view with error
@@ -206,7 +208,7 @@ class Users extends Controller //from libraries
     }
 
 
-        //if we have user, we save its data in session
+    //if we have user, we save its data in session
     public function createUserSession($userRow) {
         $_SESSION['user_id'] = $userRow->id;
         $_SESSION['user_email'] = $userRow->email;
