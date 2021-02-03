@@ -65,8 +65,7 @@
       <change beforePath="$PROJECT_DIR$/../24-M-blog/Classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/Classes/DB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../24-M-blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Posts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/libraries/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../26_A_lucky777_toMVC" beforeDir="false" afterPath="$PROJECT_DIR$/../26_A_lucky777_toMVC" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LoginPHP (1)" beforeDir="false" />
@@ -116,7 +115,7 @@
       <workItem from="1611899814341" duration="15192000" />
       <workItem from="1611917017103" duration="4717000" />
       <workItem from="1612159460619" duration="16609000" />
-      <workItem from="1612179588648" duration="38996000" />
+      <workItem from="1612179588648" duration="39909000" />
     </task>
     <task id="LOCAL−00008" summary="header with bootstrap and fontawesome with defer js">
       <created>1611822741576</created>
@@ -482,12 +481,12 @@
     <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611906439934" />
     <state x="1353" y="-751" width="749" height="668" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612259997722" />
     <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611914210326" />
-    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog" timestamp="1612256596144">
-      <screen x="531" y="-1080" width="1920" height="1040" />
+    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog" timestamp="1612338238734">
+      <screen x="531" y="-1080" width="1920" height="999" />
     </state>
     <state x="631" y="-972" width="1354" height="799" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611826690560" />
     <state x="631" y="-976" width="1024" height="539" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611908313783" />
-    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611916909341" />
+    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612338238734" />
     <state x="982" y="-819" key="FileChooserDialogImpl" timestamp="1612263750997">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
@@ -524,12 +523,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/controllers/Users.php</url>
-          <line>218</line>
+          <line>209</line>
           <properties>
             <option name="className" value="\Users" />
             <option name="methodName" value="createUserSession" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/controllers/Posts.php</url>
+          <line>36</line>
+          <properties>
+            <option name="className" value="\Posts" />
+            <option name="methodName" value="add" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

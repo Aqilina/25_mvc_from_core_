@@ -10,6 +10,7 @@ class Posts extends Controller //from libraries
 {
     private $postModel;
     private $userModel;
+    private $vld;
 
     public function __construct()
     {
@@ -18,6 +19,7 @@ class Posts extends Controller //from libraries
 
         $this->postModel = $this->model('Post');
         $this->userModel = $this->model('User');
+        $this->vld = new Validation();
     }
 
     public function index()
@@ -35,10 +37,8 @@ class Posts extends Controller //from libraries
     public function add()
     {
         //if form was submitted
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//            VALIDATION. ISVALOMAS POST MASYVAS
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
+        if ($this->vld->ifRequestIsPostAndSanitize()) {
+//        VALIDATION
             $data = [
                 'user_id' => $_SESSION['user_id'],
                 'title' => trim($_POST['title']),
@@ -104,16 +104,14 @@ class Posts extends Controller //from libraries
         $this->view('posts/show', $data);
     }
 
-
     public function edit($id = null)
     {
         //if post has no such parameter, we redirect
         if ($id === null) redirect('/posts');
 
         //if form was submitted
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($this->vld->ifRequestIsPostAndSanitize()) {
 //            VALIDATION. ISVALOMAS POST MASYVAS
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             $data = [
                 'post_id' => $id,
@@ -174,8 +172,7 @@ class Posts extends Controller //from libraries
 
     public function delete($id=null)
     {
-        $vld = new Validation();
-        if ($vld->ifRequestIsPost() && $id) {
+        if ($this->vld->ifRequestIsPost() && $id) {
 //            die('will be deleted soon');
             if ($this->postModel->deletePost($id)) {
                 flash('post_message', 'post was deleted', 'alert alert-warning' );

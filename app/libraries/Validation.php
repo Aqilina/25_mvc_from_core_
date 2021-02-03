@@ -19,6 +19,7 @@ class Validation
         if ($this->ifRequestIsPost()) {
             $this->sanitizePost();
             return true;
+            //GALIMA PRIRASYTI EXTRA CHECK
         }
         return false;
     }
