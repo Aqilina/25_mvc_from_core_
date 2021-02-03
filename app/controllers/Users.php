@@ -78,9 +78,11 @@ class Users extends Controller //from libraries
 
 
             // IF THERE ARE NO ERRORS
-            if (empty($data['errors']['nameErr']) && empty($data['errors']['emailErr']) && empty($data['errors']['passwordErr']) && empty($data['errors']['confirmPasswordErr'])) {
+//            if (empty($data['errors']['nameErr']) && empty($data['errors']['emailErr']) && empty($data['errors']['passwordErr']) && empty($data['errors']['confirmPasswordErr'])) {
                 // there are no errors;
 //                die('SUCCESS');
+    if ($this->vld->ifEmptyArr($data['errors'])) {
+
 
                 //VALIDATION IS OK
 

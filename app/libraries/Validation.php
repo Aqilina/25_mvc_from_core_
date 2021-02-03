@@ -23,4 +23,14 @@ class Validation
         }
         return false;
     }
+
+    public function ifEmptyArr($arr)
+    {
+        foreach ($arr as $errorValue) {
+            if (!empty($errorValue)) return false;
+        }
+        return true;
+    }
+
+
 }

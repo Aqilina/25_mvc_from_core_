@@ -67,6 +67,7 @@
       <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libraries/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../26_A_lucky777_toMVC" beforeDir="false" afterPath="$PROJECT_DIR$/../26_A_lucky777_toMVC" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LoginPHP (1)" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
@@ -115,7 +116,7 @@
       <workItem from="1611899814341" duration="15192000" />
       <workItem from="1611917017103" duration="4717000" />
       <workItem from="1612159460619" duration="16609000" />
-      <workItem from="1612179588648" duration="42036000" />
+      <workItem from="1612179588648" duration="43617000" />
     </task>
     <task id="LOCAL−00008" summary="header with bootstrap and fontawesome with defer js">
       <created>1611822741576</created>
