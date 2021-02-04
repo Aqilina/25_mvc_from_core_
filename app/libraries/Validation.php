@@ -35,6 +35,12 @@ class Validation
         }
         return true;
     }
+
+    public function validateEmpty($field, $msg)
+    {
+        return empty($field) ? $msg : '';
+    }
+
 //-------------------------------------------------------------------------------------------------------------
 //    PAVALIDUOTI TUSCIA LAUKA - RETURN MESSAGE, else - return empty string
     public function ifEmptyFieldWithReference(&$data, $field, $fieldDisplayName)
@@ -71,6 +77,20 @@ class Validation
         //if found nothing
         return '';
     }
+
+    public function validateLoginEmail($field, &$userModel)
+    {
+        //validate empty
+        if (empty($field)) return "Please enter your Email";
+
+        //check email format
+        if (filter_var($field, FILTER_VALIDATE_EMAIL) === false) return "Please check your email";
+
+        //if email already exists
+        if (!$userModel->findUserByEmail($field)) return 'Email not found';
+
+    }
+//    -----------------------------------------------------------------------------------------------------------------
 
     public function validatePassword($passField, $min, $max)
     {
