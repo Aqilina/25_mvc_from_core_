@@ -1,10 +1,12 @@
 <?php
+
 /*
  * Users class
  * Register user
  * Login user
  * Control Uses behavior and access
 */
+
 class Users extends Controller //from libraries
 {
     private $userModel;
@@ -16,76 +18,77 @@ class Users extends Controller //from libraries
         $this->userModel = $this->model('User');
         $this->vld = new Validation();
     }
-
+//-----------------------------------------------------------------------------------------------------------------------
     public function register()
     {
         if ($this->vld->ifRequestIsPostAndSanitize()) {
 
             // create data
             $data = [
-                'name'      => trim($_POST['name']),
-                'email'     => trim($_POST['email']),
-                'password'  => trim($_POST['password']),
+                'name' => trim($_POST['name']),
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
 
                 'errors' => [
-                    'nameErr'      => '',
-                    'emailErr'     => '',
-                    'passwordErr'  => '',
+                    'nameErr' => '',
+                    'emailErr' => '',
+                    'passwordErr' => '',
                     'confirmPasswordErr' => '',
                 ],
             ];
+//----------------------------------------------------------------------------------------------------------------------------
+            // VALIDATE NAME
+//            if (empty($data['name'])) {
+//                // empty field
+//                $data['errors']['nameErr'] = "Please enter Your Name";
+//            }
 
-            // Validate Name
-            if (empty($data['name'])) {
-                // empty field
-                $data['errors']['nameErr'] = "Please enter Your Name";
-            }
+            //by reference
+//            $this->vld->ifEmptyFieldWithReference($data, 'name', 'Name');
+            $data['errors']['nameErr'] = $this->vld->ifEmptyField($data['name'], 'Name');
 
-            // Validate Email
-            if (empty($data['email'])) {
-                // empty field
-                $data['errors']['emailErr'] = "Please enter Your Email";
-            } else {
+//------------------------------------------------------------------------------------------------------------------------
+            // VALIDATE EMAIL
+            $data['errors']['emailErr'] = $this->vld->ifEmptyField($data['email'], 'Email'); //jei grazina tuscia stringa,
+            // vadinasi nera klaidu - kazkas ivesta i name
+
+//            JEI NERA KLAIDOS, KAD NIEKO NEIVESTA
+            if ($data['errors']['emailErr'] === '') {
                 if (filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
                     $data['errors']['emailErr'] = "Please check your email";
                 } else {
 //                    check if email already exists
                     if ($this->userModel->findUserByEmail($data['email'])) {
-                        $data['errors']['emailErr'] = "Email already taken";
+                        $data['errors']['emailErr'] = "Email is already taken";
                     }
                 }
             }
+//------------------------------------------------------------------------------------------------------------------------
+            // VALIDATE PASSWORD
+            $data['errors']['passwordErr'] = $this->vld->ifEmptyField($data['password'], 'Password');
 
-            // Validate Password
-            if (empty($data['password'])) {
-                // empty field
-                $data['errors']['passwordErr'] = "Please enter a password";
-            } elseif (strlen($data['password']) < 6) {
-                $data['errors']['passwordErr'] = "Password must be 6 or more characters";
-            }
-
-            // Validate confirmPassword
-            if (empty($data['confirmPassword'])) {
-                // empty field
-                $data['errors']['confirmPasswordErr'] = "Please repeat password";
-            } else {
-                if ($data['confirmPassword'] !== $data['password']) {
-                    $data['errors']['confirmPasswordErr'] = "Password must match";
+            if ($data['errors']['passwordErr'] === '') {
+                if (strlen($data['password']) < 6) {
+                    $data['errors']['passwordErr'] = "Password must be 6 or more characters";
                 }
             }
 
+            // // VALIDATE PASSWORD CONFIRMATION
+            $data['errors']['confirmPassword'] = $this->vld->ifEmptyField($data['confirmPassword'], 'Password', 'Please repeat password');
 
 
+            if ($data['errors']['confirmPassword'] === '') {
+
+                if ($data['confirmPassword'] !== $data['password']) {
+                    $data['errors']['confirmPasswordErr'] = "Passwords must match";
+                }
+            }
+
+//------------------------------------------------------------------------------------------------------------------------
             // IF THERE ARE NO ERRORS
-//            if (empty($data['errors']['nameErr']) && empty($data['errors']['emailErr']) && empty($data['errors']['passwordErr']) && empty($data['errors']['confirmPasswordErr'])) {
-                // there are no errors;
-//                die('SUCCESS');
-    if ($this->vld->ifEmptyArr($data['errors'])) {
-
-
+            if ($this->vld->ifEmptyArr($data['errors'])) {
                 //VALIDATION IS OK
-
 
 //                HASH PASSWORD //safe vay to store password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
@@ -114,15 +117,15 @@ class Users extends Controller //from libraries
 
             // create data
             $data = [
-                'name'      => '',
-                'email'     => '',
-                'password'  => '',
+                'name' => '',
+                'email' => '',
+                'password' => '',
                 'confirmPassword' => '',
 
                 'errors' => [
-                    'nameErr'      => '',
-                    'emailErr'     => '',
-                    'passwordErr'  => '',
+                    'nameErr' => '',
+                    'emailErr' => '',
+                    'passwordErr' => '',
                     'confirmPasswordErr' => '',
                 ],
 
@@ -141,11 +144,11 @@ class Users extends Controller //from libraries
 
             // create data
             $data = [
-                'email'     => trim($_POST['email']),
-                'password'  => trim($_POST['password']),
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
                 'currentPage' => 'login',
-                'emailErr'     => '',
-                'passwordErr'  => '',
+                'emailErr' => '',
+                'passwordErr' => '',
             ];
 
 //            validate email
@@ -197,10 +200,10 @@ class Users extends Controller //from libraries
 
             // create data
             $data = [
-                'email'     => '',
-                'password'  => '',
-                'emailErr'     => '',
-                'passwordErr'  => '',
+                'email' => '',
+                'password' => '',
+                'emailErr' => '',
+                'passwordErr' => '',
                 'currentPage' => 'login',
             ];
 
@@ -211,7 +214,8 @@ class Users extends Controller //from libraries
 
 
     //if we have user, we save its data in session
-    public function createUserSession($userRow) {
+    public function createUserSession($userRow)
+    {
         $_SESSION['user_id'] = $userRow->id;
         $_SESSION['user_email'] = $userRow->email;
         $_SESSION['user_name'] = $userRow->name;
@@ -219,7 +223,8 @@ class Users extends Controller //from libraries
         redirect('/posts');
     }
 
-    public function logout() {
+    public function logout()
+    {
         unset($_SESSION['user_id']);
         unset($_SESSION['user_email']);
         unset($_SESSION['user_name']);
