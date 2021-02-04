@@ -51,7 +51,7 @@ class Users extends Controller //from libraries
 
             //by reference
 //            $this->vld->ifEmptyFieldWithReference($data, 'name', 'Name');
-            $data['errors']['nameErr'] = $this->vld->ifEmptyField($data['name'], 'Name');
+            $data['errors']['nameErr'] = $this->vld->validateName($data['name'], 'Name');
 
 //------------------------------------------------------------------------------------------------------------------------
             // VALIDATE EMAIL
@@ -91,8 +91,10 @@ class Users extends Controller //from libraries
 //            }
 //
 //            // // VALIDATE PASSWORD CONFIRMATION
+            $data['errors']['confirmPasswordErr'] = $this->vld->confirmPassword($data['confirmPassword']);
+
+
 //            $data['errors']['confirmPassword'] = $this->vld->ifEmptyField($data['confirmPassword'], 'Password', 'Please repeat password');
-//
 //
 //            if ($data['errors']['confirmPassword'] === '') {
 //
