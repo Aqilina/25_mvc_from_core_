@@ -16,11 +16,13 @@ class Users extends Controller //from libraries
     public function __construct()
     {
         $this->userModel = $this->model('User');
-        $this->vld = new Validation();
+        $this->vld = new Validation;
     }
+
 //-----------------------------------------------------------------------------------------------------------------------
 
-    public function index() {
+    public function index()
+    {
         redirect('/posts');
     }
 
@@ -51,8 +53,7 @@ class Users extends Controller //from libraries
 
             //by reference
 //            $this->vld->ifEmptyFieldWithReference($data, 'name', 'Name');
-            $data['errors']['nameErr'] = $this->vld->validateName($data['name'], 'Name');
-
+            $data['errors']['nameErr'] = $this->vld->validateName($data['name']);
 //------------------------------------------------------------------------------------------------------------------------
             // VALIDATE EMAIL
 
@@ -78,8 +79,6 @@ class Users extends Controller //from libraries
 //------------------------------------------------------------------------------------------------------------------------
             // VALIDATE PASSWORD
             $data['errors']['passwordErr'] = $this->vld->validatePassword($data['password'], 6, 10);
-
-
 
 
 //            $data['errors']['passwordErr'] = $this->vld->ifEmptyField($data['password'], 'Password');
@@ -139,14 +138,12 @@ class Users extends Controller //from libraries
                 'email' => '',
                 'password' => '',
                 'confirmPassword' => '',
-
                 'errors' => [
                     'nameErr' => '',
                     'emailErr' => '',
                     'passwordErr' => '',
                     'confirmPasswordErr' => '',
                 ],
-
                 'currentPage' => 'register',
             ];
 
@@ -164,43 +161,50 @@ class Users extends Controller //from libraries
             $data = [
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
-                'currentPage' => 'login',
-                'emailErr' => '',
-                'passwordErr' => '',
+                'errors' => [
+                    'emailErr' => '',
+                    'passwordErr' => '',
+                ],
             ];
 
 //            validate email
-            if (empty($data['email'])) {
-                $data['emailErr'] = 'Please enter your email';
-            } else {
-                //check if we have this email is our user table DB
-                if ($this->userModel->findUserByEmail($data['email'])) {
-                    //user found
-                } else {
-                    $data['emailErr'] = 'User does not exist';
-                }
-            }
+            $data['errors']['emailErr'] = $this->vld->validateLoginEmail($data['email'], $this->userModel);
+
+//            SENAS KODAS
+//            if (empty($data['email'])) {
+//                $data['emailErr'] = 'Please enter your email';
+//            } else {
+//                //check if we have this email is our user table DB
+//                if ($this->userModel->findUserByEmail($data['email'])) {
+//                    //user found
+//                } else {
+//                    $data['emailErr'] = 'User does not exist';
+//                }
+//            }
 
             //validate password
-            if (empty($data['password'])) {
-                $data['passwordErr'] = 'Please enter your password';
-            }
+            $data['errors']['passwordErr'] = $this->vld->validateEmpty($data['password'], 'Please enter your password');
+
+            //SENAS KODAS
+//            if (empty($data['password'])) {
+//                $data['passwordErr'] = 'Please enter your password';
+//            }
 
 //     ---------------------------------------------------------------------------------------------
             //check if we have errors
-            if (empty($data['emailErr']) && empty($data['passwordErr'])) {
+            if ($this->vld->ifEmptyArr($data['errors'])) {
+//            if (empty($data['errors']['emailErr']) && empty($data['errors']['passwordErr'])) {
                 //no errors
                 //email wa found and password entered
                 $loggedInUser = $this->userModel->login($data['email'], $data['password']);
 
                 if ($loggedInUser) {
                     //CREATE SESSION
-                    $this->createUserSession($loggedInUser);
-
                     //password match
 //                    die('Email and pass match start session immediately');
+                    $this->createUserSession($loggedInUser);
                 } else {
-                    $data['passwordErr'] = 'Wrong password or email';
+                    $data['errors']['passwordErr'] = 'Wrong password or email';
                     //load view with error
                     $this->view('users/login', $data);
                 }
@@ -220,9 +224,10 @@ class Users extends Controller //from libraries
             $data = [
                 'email' => '',
                 'password' => '',
-                'emailErr' => '',
-                'passwordErr' => '',
-                'currentPage' => 'login',
+                'errors' => [
+                    'emailErr' => '',
+                    'passwordErr' => '',
+                ]
             ];
 
             // load view
@@ -237,7 +242,6 @@ class Users extends Controller //from libraries
         $_SESSION['user_id'] = $userRow->id;
         $_SESSION['user_email'] = $userRow->email;
         $_SESSION['user_name'] = $userRow->name;
-
         redirect('/posts');
     }
 
@@ -246,10 +250,9 @@ class Users extends Controller //from libraries
         unset($_SESSION['user_id']);
         unset($_SESSION['user_email']);
         unset($_SESSION['user_name']);
+
         session_destroy();
 
         redirect('/users/login');
-
     }
-
 }
