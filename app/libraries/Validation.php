@@ -32,5 +32,24 @@ class Validation
         return true;
     }
 
+//    PAVALIDUOTI TUSCIA LAUKA - RETURN MESSAGE, else - return empty string
+    public function ifEmptyFieldWithReference(&$data, $field, $fieldDisplayName) {
+        $fieldError = $field . 'Err';
+        if (empty($data[$field])) {
+            // empty field
+            $data['errors'][$fieldError] = "$fieldDisplayName";
+        }
+    }
+//    ARBA
+    public function ifEmptyField($field, $fieldDisplayName, $msg = null) {
+        if (empty($field)) {
+            // empty field
+            if ($msg) {
+                return $msg;
+            }
+            return "Please enter Your $fieldDisplayName";
+        }
+        return '';
+    }
 
 }
