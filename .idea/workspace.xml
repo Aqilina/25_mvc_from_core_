@@ -20,7 +20,7 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:validation_refactoring" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -66,8 +66,6 @@
       <change beforePath="$PROJECT_DIR$/../24-M-blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libraries/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../26_A_lucky777_toMVC" beforeDir="false" afterPath="$PROJECT_DIR$/../26_A_lucky777_toMVC" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LoginPHP (1)" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
@@ -96,7 +94,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../25_A_laimes777" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../26_A_lucky777_toMVC" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/controllers/Users.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -116,55 +114,7 @@
       <workItem from="1611899814341" duration="15192000" />
       <workItem from="1611917017103" duration="4717000" />
       <workItem from="1612159460619" duration="16609000" />
-      <workItem from="1612179588648" duration="43617000" />
-    </task>
-    <task id="LOCAL−00008" summary="header with bootstrap and fontawesome with defer js">
-      <created>1611822741576</created>
-      <option name="number" value="LOCAL−00008" />
-      <option name="presentableId" value="LOCAL−00008" />
-      <updated>1611822741576</updated>
-    </task>
-    <task id="LOCAL−00009" summary="other">
-      <created>1611822780055</created>
-      <option name="number" value="LOCAL−00009" />
-      <option name="presentableId" value="LOCAL−00009" />
-      <updated>1611822780055</updated>
-    </task>
-    <task id="LOCAL−00010" summary="other">
-      <created>1611822800206</created>
-      <option name="number" value="LOCAL−00010" />
-      <option name="presentableId" value="LOCAL−00010" />
-      <updated>1611822800206</updated>
-    </task>
-    <task id="LOCAL−00011" summary="started the User model class">
-      <created>1611900800777</created>
-      <option name="number" value="LOCAL−00011" />
-      <option name="presentableId" value="LOCAL−00011" />
-      <updated>1611900800777</updated>
-    </task>
-    <task id="LOCAL−00012" summary="created fn findUserByEmail and used it to test">
-      <created>1611903495045</created>
-      <option name="number" value="LOCAL−00012" />
-      <option name="presentableId" value="LOCAL−00012" />
-      <updated>1611903495045</updated>
-    </task>
-    <task id="LOCAL−00013" summary="fix typo errors">
-      <created>1611903558265</created>
-      <option name="number" value="LOCAL−00013" />
-      <option name="presentableId" value="LOCAL−00013" />
-      <updated>1611903558265</updated>
-    </task>
-    <task id="LOCAL−00014" summary="added complicated session helper">
-      <created>1611910091084</created>
-      <option name="number" value="LOCAL−00014" />
-      <option name="presentableId" value="LOCAL−00014" />
-      <updated>1611910091084</updated>
-    </task>
-    <task id="LOCAL−00015" summary="added to bootstrap session_helper">
-      <created>1611910111247</created>
-      <option name="number" value="LOCAL−00015" />
-      <option name="presentableId" value="LOCAL−00015" />
-      <updated>1611910111247</updated>
+      <workItem from="1612179588648" duration="74241000" />
     </task>
     <task id="LOCAL−00016" summary="setting flash msg in register controller">
       <created>1611910136556</created>
@@ -412,7 +362,55 @@
       <option name="presentableId" value="LOCAL−00056" />
       <updated>1612259998266</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL−00057" summary="if emptyFields methods with and without reference">
+      <created>1612418968932</created>
+      <option name="number" value="LOCAL−00057" />
+      <option name="presentableId" value="LOCAL−00057" />
+      <updated>1612418968933</updated>
+    </task>
+    <task id="LOCAL−00058" summary="user.php validation refactoring in progress">
+      <created>1612418995230</created>
+      <option name="number" value="LOCAL−00058" />
+      <option name="presentableId" value="LOCAL−00058" />
+      <updated>1612418995230</updated>
+    </task>
+    <task id="LOCAL−00059" summary="using new validation logic">
+      <created>1612422759774</created>
+      <option name="number" value="LOCAL−00059" />
+      <option name="presentableId" value="LOCAL−00059" />
+      <updated>1612422759774</updated>
+    </task>
+    <task id="LOCAL−00060" summary="short elegant simple and clear validation logic and functions">
+      <created>1612422872378</created>
+      <option name="number" value="LOCAL−00060" />
+      <option name="presentableId" value="LOCAL−00060" />
+      <updated>1612422872378</updated>
+    </task>
+    <task id="LOCAL−00061" summary="validateName and confirmPassword methods">
+      <created>1612424816472</created>
+      <option name="number" value="LOCAL−00061" />
+      <option name="presentableId" value="LOCAL−00061" />
+      <updated>1612424816472</updated>
+    </task>
+    <task id="LOCAL−00062" summary="users.php uses new beautiful tested validation logic">
+      <created>1612424859043</created>
+      <option name="number" value="LOCAL−00062" />
+      <option name="presentableId" value="LOCAL−00062" />
+      <updated>1612424859043</updated>
+    </task>
+    <task id="LOCAL−00063" summary="validateEmpty() and validateLoginEmail() methods">
+      <created>1612427472013</created>
+      <option name="number" value="LOCAL−00063" />
+      <option name="presentableId" value="LOCAL−00063" />
+      <updated>1612427472013</updated>
+    </task>
+    <task id="LOCAL−00064" summary="using refactored vld methods in users controller login method">
+      <created>1612427558672</created>
+      <option name="number" value="LOCAL−00064" />
+      <option name="presentableId" value="LOCAL−00064" />
+      <updated>1612427558672</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +427,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="validation_refactoring" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -443,14 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created post model, used getPosts and send data to the view" />
-    <MESSAGE value="generate post cards in the view" />
-    <MESSAGE value="created add method and loading view" />
-    <MESSAGE value="add post view (copied from login)" />
-    <MESSAGE value="if loggedIn - ew redirect to posts" />
-    <MESSAGE value="postMmodel add addPost method" />
-    <MESSAGE value="add addPost method validation" />
-    <MESSAGE value="showing flash message" />
     <MESSAGE value="added show method and load view" />
     <MESSAGE value="function get post by id returns post row" />
     <MESSAGE value="single post view in progress" />
@@ -468,43 +458,56 @@
     <MESSAGE value="Created validation class + ifrequestIsPost() method" />
     <MESSAGE value="created method deletePost()" />
     <MESSAGE value="delete() method, which redirects to posts controller (cannot if post method is GET)" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete() method, which redirects to posts controller (cannot if post method is GET)" />
+    <MESSAGE value="if emptyFields methods with and without reference" />
+    <MESSAGE value="user.php validation refactoring in progress" />
+    <MESSAGE value="using new validation logic" />
+    <MESSAGE value="short elegant simple and clear validation logic and functions" />
+    <MESSAGE value="validateName and confirmPassword methods" />
+    <MESSAGE value="users.php uses new beautiful tested validation logic" />
+    <MESSAGE value="validateEmpty() and validateLoginEmail() methods" />
+    <MESSAGE value="using refactored vld methods in users controller login method" />
+    <option name="LAST_COMMIT_MESSAGE" value="using refactored vld methods in users controller login method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="-756" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612256361985">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
     <state x="880" y="-756" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612256361985" />
-    <state x="1353" y="-751" width="749" height="668" key="CommitChangelistDialog2" timestamp="1612259997722">
+    <state x="969" y="-870" width="749" height="668" key="CommitChangelistDialog2" timestamp="1612427558090">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="969" y="-870" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612161296785" />
+    <state x="969" y="-870" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612427558090" />
     <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611906439934" />
     <state x="1353" y="-751" width="749" height="668" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612259997722" />
     <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611914210326" />
-    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog" timestamp="1612340538003">
-      <screen x="531" y="-1080" width="1920" height="999" />
-    </state>
-    <state x="631" y="-972" width="1354" height="799" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611826690560" />
-    <state x="631" y="-976" width="1024" height="539" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611908313783" />
-    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612340538003" />
-    <state x="982" y="-819" key="FileChooserDialogImpl" timestamp="1612263750997">
+    <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog" timestamp="1612426833840">
       <screen x="531" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612426833840" />
+    <state x="631" y="-976" width="1024" height="539" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611908313783" />
+    <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612352610439" />
+    <state x="982" y="-829" key="FileChooserDialogImpl" timestamp="1612358813580">
+      <screen x="531" y="-1080" width="1920" height="999" />
     </state>
     <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612263750997" />
     <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815326597" />
     <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612256351367" />
-    <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611917052414" />
+    <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612358813580" />
     <state x="872" y="-835" key="NewPhpClassDialog" timestamp="1612258219180">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
     <state x="872" y="-835" key="NewPhpClassDialog/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612258219180" />
-    <state x="1010" y="-631" key="NewPhpFileDialog" timestamp="1612256369682">
+    <state x="1010" y="-631" key="NewPhpFileDialog" timestamp="1612420879243">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1611822266746" />
+    <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612420879243" />
     <state x="1010" y="-649" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611906816908" />
     <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612256369682" />
+    <state x="1566" y="-920" width="698" height="880" key="find.popup" timestamp="1612419108082">
+      <screen x="531" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="1566" y="-920" width="698" height="880" key="find.popup/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612419108082" />
+    <state x="1566" y="-926" width="698" height="845" key="find.popup/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612357956281" />
     <state x="783" y="-325" key="run.anything.popup" timestamp="1611905229490">
       <screen x="531" y="-1080" width="1920" height="999" />
     </state>
