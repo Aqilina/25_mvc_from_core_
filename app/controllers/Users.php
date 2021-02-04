@@ -19,6 +19,11 @@ class Users extends Controller //from libraries
         $this->vld = new Validation();
     }
 //-----------------------------------------------------------------------------------------------------------------------
+
+    public function index() {
+        redirect('/posts');
+    }
+
     public function register()
     {
         if ($this->vld->ifRequestIsPostAndSanitize()) {
@@ -50,40 +55,51 @@ class Users extends Controller //from libraries
 
 //------------------------------------------------------------------------------------------------------------------------
             // VALIDATE EMAIL
-            $data['errors']['emailErr'] = $this->vld->ifEmptyField($data['email'], 'Email'); //jei grazina tuscia stringa,
-            // vadinasi nera klaidu - kazkas ivesta i name
 
-//            JEI NERA KLAIDOS, KAD NIEKO NEIVESTA
-            if ($data['errors']['emailErr'] === '') {
-                if (filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
-                    $data['errors']['emailErr'] = "Please check your email";
-                } else {
-//                    check if email already exists
-                    if ($this->userModel->findUserByEmail($data['email'])) {
-                        $data['errors']['emailErr'] = "Email is already taken";
-                    }
-                }
-            }
+
+            $data['errors']['emailErr'] = $this->vld->validateEmail($data['email'], $this->userModel);
+
+
+//            SENAS VARINATAS
+//            $data['errors']['emailErr'] = $this->vld->ifEmptyField($data['email'], 'Email'); //jei grazina tuscia stringa,
+//            // vadinasi nera klaidu - kazkas ivesta i name
+//
+////            JEI NERA KLAIDOS, KAD NIEKO NEIVESTA
+//            if ($data['errors']['emailErr'] === '') {
+//                if (filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
+//                    $data['errors']['emailErr'] = "Please check your email";
+//                } else {
+////                    check if email already exists
+//                    if ($this->userModel->findUserByEmail($data['email'])) {
+//                        $data['errors']['emailErr'] = "Email is already taken";
+//                    }
+//                }
+//            }
 //------------------------------------------------------------------------------------------------------------------------
             // VALIDATE PASSWORD
-            $data['errors']['passwordErr'] = $this->vld->ifEmptyField($data['password'], 'Password');
-
-            if ($data['errors']['passwordErr'] === '') {
-                if (strlen($data['password']) < 6) {
-                    $data['errors']['passwordErr'] = "Password must be 6 or more characters";
-                }
-            }
-
-            // // VALIDATE PASSWORD CONFIRMATION
-            $data['errors']['confirmPassword'] = $this->vld->ifEmptyField($data['confirmPassword'], 'Password', 'Please repeat password');
+            $data['errors']['passwordErr'] = $this->vld->validatePassword($data['password'], 6, 10);
 
 
-            if ($data['errors']['confirmPassword'] === '') {
 
-                if ($data['confirmPassword'] !== $data['password']) {
-                    $data['errors']['confirmPasswordErr'] = "Passwords must match";
-                }
-            }
+
+//            $data['errors']['passwordErr'] = $this->vld->ifEmptyField($data['password'], 'Password');
+//
+//            if ($data['errors']['passwordErr'] === '') {
+//                if (strlen($data['password']) < 6) {
+//                    $data['errors']['passwordErr'] = "Password must be 6 or more characters";
+//                }
+//            }
+//
+//            // // VALIDATE PASSWORD CONFIRMATION
+//            $data['errors']['confirmPassword'] = $this->vld->ifEmptyField($data['confirmPassword'], 'Password', 'Please repeat password');
+//
+//
+//            if ($data['errors']['confirmPassword'] === '') {
+//
+//                if ($data['confirmPassword'] !== $data['password']) {
+//                    $data['errors']['confirmPasswordErr'] = "Passwords must match";
+//                }
+//            }
 
 //------------------------------------------------------------------------------------------------------------------------
             // IF THERE ARE NO ERRORS
