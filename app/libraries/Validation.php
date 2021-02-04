@@ -3,6 +3,8 @@
 //this is a class to validate diff inputs and data
 class Validation
 {
+    private $password;
+    private $errors;
     //check if server request is post
     //@ return boolean
     public function ifRequestIsPost()
@@ -45,17 +47,15 @@ class Validation
     }
 
 //    ARBA
-    public function ifEmptyField($field, $fieldDisplayName, $msg = null)
+    public function validateName($field)
     {
-        if (empty($field)) {
-            // empty field
-            if ($msg) {
-                return $msg;
-            }
-            return "Please enter Your $fieldDisplayName";
-        }
+
+        if (empty($field)) return "Please enter your name";
+        if (!preg_match("/^[a-z ,.'-]+$/i", $field)) return "Name must contain only characters";
+
         return '';
     }
+
 //-------------------------------------------------------------------------------------------------
     public function validateEmail($field, &$userModel)
     {
@@ -77,19 +77,32 @@ class Validation
         //validate empty
         if (empty($passField)) return "Please enter a password";
 
+        //save password for later
+        $this->password = $passField;
+
         //if pass length is less then min
         if (strlen($passField) < $min) return "Password must be more than $min characters length";
         //if pass is longer than 10
         if (strlen($passField) > $max) return "Password must be less than $max characters length";
 
         //check password strength
-        if( !preg_match("#[0-9]+#", $passField)) return "Password must include at least one number!";
-        if( !preg_match("#[a-z]+#", $passField) ) return "Password must include at least one letter!";
-        if( !preg_match("#[A-Z]+#", $passField) ) return "Password must include at least one CAPS!";
-        if( !preg_match("#\W+#", $passField) ) return "Password must include at least one symbol!";
+//        if (!preg_match("#[0-9]+#", $passField)) return "Password must include at least one number!";
+//        if (!preg_match("#[a-z]+#", $passField)) return "Password must include at least one letter!";
+//        if (!preg_match("#[A-Z]+#", $passField)) return "Password must include at least one CAPS!";
+//        if (!preg_match("#\W+#", $passField)) return "Password must include at least one symbol!";
 
+//        jei nieko is auksciau nereturnino
         return '';
-
     }
 
+    public function confirmPassword($repeatField)
+    {
+     if (empty($repeatField)) return "Please return password";
+
+     if ($this->password) return 'Couldn\'t find password';
+
+     if ($repeatField !== $this->password) return "Passwords must match";
+
+     return '';
+    }
 }
