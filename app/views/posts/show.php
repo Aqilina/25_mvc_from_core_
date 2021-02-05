@@ -4,16 +4,17 @@ require APPROOT . '/views/inc/header.php';
 
 <?php //var_dump($data['post']);?>
 <?php //var_dump($data['user']);?>
-<!--<h1>This is single page template for the post --><?php //echo $data['post']->id?><!--</h1>-->
 
-<a href="<?php echo URLROOT?>/posts" class="btn btn-light my-3"><i class="fa fa-chevron-left"></i> Back</a>
 
-<h1 class="display-3"><?php echo $data['post']->title?></h1>
+<!--SINGLE POST VIEW /posts/show/ID-->
+<a href="<?php echo URLROOT ?>/posts" class="btn btn-light my-3"><i class="fa fa-chevron-left"></i> Back</a>
+
+<h1 class="display-3"><?php echo $data['post']->title ?></h1>
 <div class="bg-secondary text-white p-2 mb-3">
     Written by <strong><?php echo $data['user']->name ?></strong>
-    On : <?php echo $data['post']->created_at?>
+    On : <?php echo $data['post']->created_at ?>
 </div>
-<p class="lead"><?php echo $data['post']->body?></p>
+<p class="lead"><?php echo $data['post']->body ?></p>
 
 
 <!-------------------------------------------------------------------------------------------------------->
@@ -22,39 +23,71 @@ require APPROOT . '/views/inc/header.php';
 <?php //var_dump($data['post']);?>
 <?php //var_dump($data['user']);?>
 <?php //var_dump($_SESSION);?>
+
+<!--MYGTUKAI 'EDIT' IR 'DELETE'-->
 <hr>
-
-
 <?php if ($data['post']->user_id === $_SESSION['user_id']) : ?>
-<!--PARODO PARAM ID-->
-<a href="<?php echo URLROOT . '/posts/edit/' . $data['post']->id?>" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+    <!--PARODO PARAM ID-->
+    <a href="<?php echo URLROOT . '/posts/edit/' . $data['post']->id ?>" class="btn btn-info"><i
+                class="fa fa-pencil"></i> Edit</a>
 
-<!--forma apdorjama posts/delete-->
-<form action="<?php echo URLROOT . '/posts/delete/' . $data['post']->id?>" method="post" class="pull-right">
-    <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i> Delete</button>
-</form>
+    <!--forma apdorojama posts/delete-->
+    <form action="<?php echo URLROOT . '/posts/delete/' . $data['post']->id ?>" method="post" class="pull-right">
+        <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i> Delete</button>
+    </form>
 <?php
 endif;
 ?>
+
 <!--------------------------------------------------------------------------------------------------------------------->
-<?php if (isset($data['commentsOn'])) :?>
+<!--//RODOMI KOMENTARAI -->
+<?php if (isset($data['commentsOn'])) : ?>
 
     <hr class="mt-5 mb-4">
     <div class="row mb-5">
         <div class="col">
             <h2>Comments</h2>
             <div id="comments" class="comment-container">
-                <div class="card">
-                    <div class="card-header">Author <span>When</span></div>
-                    <div class="card-body">
-                        comment text
-                    </div>
-                </div>
+                <h2 class="display-3">Loading</h2>
             </div>
         </div>
     </div>
 
-<?php endif;?>
+    <script>
+        const commentsOutputEl = document.getElementById('comments')
+
+        fetchComments();
+
+        function fetchComments() {
+            fetch('<?php echo URLROOT . '/api/comments/' . $data['post']->id ?>')
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log(data)
+                    generateHTMLComments(data.comments)
+                });
+        }
+
+        function generateHTMLComments(commentsArr) {
+            commentsOutputEl.innerHTML = ''
+            commentsArr.forEach(function (commentObj) {
+                commentsOutputEl.innerHTML += generateOneComment(commentObj)
+            })
+        }
+
+        function generateOneComment(oneComment) {
+            return `
+                <div class="card">
+                <div class="card-header">${oneComment.author}
+                <span>${oneComment.created_at}</span></div>
+            <div class="card-body">
+                ${oneComment.comment_body}
+            </div>
+            </div>`
+        }
+    </script>
+
+
+<?php endif; ?>
 
 <?php
 require APPROOT . '/views/inc/footer.php';
