@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', '25_mvc_from_core');
+define('DB_NAME', 'copied_mvc_from_core');
 
 // aprrot wil be used when we need absloute path to our app dir
 define('APPROOT', dirname(dirname(__FILE__)));
