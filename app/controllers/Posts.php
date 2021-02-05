@@ -99,7 +99,7 @@ class Posts extends Controller //from libraries
         $data = [
             'post' => $post,
             'user' => $user,
-            'currentPage' => 'show'
+            'commentsOn' => true
         ];
         $this->view('posts/show', $data);
     }

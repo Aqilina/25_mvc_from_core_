@@ -36,6 +36,25 @@ require APPROOT . '/views/inc/header.php';
 <?php
 endif;
 ?>
+<!--------------------------------------------------------------------------------------------------------------------->
+<?php if (isset($data['commentsOn'])) :?>
+
+    <hr class="mt-5 mb-4">
+    <div class="row mb-5">
+        <div class="col">
+            <h2>Comments</h2>
+            <div id="comments" class="comment-container">
+                <div class="card">
+                    <div class="card-header">Author <span>When</span></div>
+                    <div class="card-body">
+                        comment text
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php endif;?>
 
 <?php
 require APPROOT . '/views/inc/footer.php';
