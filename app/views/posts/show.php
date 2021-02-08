@@ -35,6 +35,8 @@ require APPROOT . '/views/inc/header.php';
     <form action="<?php echo URLROOT . '/posts/delete/' . $data['post']->id ?>" method="post" class="pull-right">
         <button type="submit" class="btn btn-danger"><i class="fa fa-close"></i> Delete</button>
     </form>
+
+<div id="out"></div>
 <?php
 endif;
 ?>
@@ -52,10 +54,10 @@ endif;
             <form action="" method="post" id="add-comment-form">
                 <div class="form-group">
 <!--                    //required padaro, kad jei tuscias, mestu zinute "please fill in this form"-->
-                    <input required type="text" name="username" class="form-control" value="<?php echo $_SESSION['user_name']?>">
+                    <input type="text" name="username" class="form-control" value="<?php echo $_SESSION['user_name']?>">
                 </div>
                 <div class="form-group">
-                    <textarea required class="form-control" type="text" name="commentBody" id="" placeholder="Write your comment" ></textarea>
+                    <textarea id="comment-body" class="form-control" type="text" name="commentBody"  placeholder="Write your comment" ></textarea>
                 </div>
                 <button type="submit" class="btn btn-success">Comment</button>
             </form>
@@ -73,6 +75,7 @@ endif;
     <script>
         const commentsOutputEl = document.getElementById('comments')
         const addCommentFormEl = document.getElementById('add-comment-form')
+        const commentBodyEl = document.getElementById('comment-body')
 
         addCommentFormEl.addEventListener('submit', addCommentAsync) //submit veiks paspaudus ENTER
 
@@ -104,7 +107,7 @@ endif;
             </div>
             </div>`
         }
-
+// --------------------------------------------------------------------------------------------------------------
         // prideda komentara
         function addCommentAsync(event) {
             event.preventDefault();  // NELEIDZIA FORMOS ISSIUSTI SU PHP
@@ -115,11 +118,24 @@ endif;
             fetch('<?php echo URLROOT . '/api/addComment/' . $data['post']->id ?>', {
                 method: 'post',
                 body: addCommentFormData
-            }).then(response => response.text())
+            }).then(response => response.json())
             .then(data => {
                 console.log(data)
+                if (data.success) {
+                    handleSuccessComment();
+                }
+                // document.getElementById('out').innerHTML = data
             }). catch(error => console.error(error))
         }
+
+// -------------------------------------------------------------------------------------------------------------------
+        function handleSuccessComment() {
+            //clear comment fields
+            commentBodyEl.value = '';
+            //add new comment
+            fetchComments();
+        }
+
     </script>
 
 
