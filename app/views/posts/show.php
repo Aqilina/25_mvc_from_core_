@@ -49,12 +49,13 @@ endif;
 <!--        FORMA KOMENTARAMS RASYTI-->
         <div class="col-12">
             <h2>WRITE COMMENT</h2>
-            <form action="" method="post">
+            <form action="" method="post" id="add-comment-form">
                 <div class="form-group">
-                    <input type="text" name="username" class="form-control" value="<?php echo $_SESSION['user_name']?>">
+<!--                    //required padaro, kad jei tuscias, mestu zinute "please fill in this form"-->
+                    <input required type="text" name="username" class="form-control" value="<?php echo $_SESSION['user_name']?>">
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" type="text" name="commentBody" id="" placeholder="Write your comment" ></textarea>
+                    <textarea required class="form-control" type="text" name="commentBody" id="" placeholder="Write your comment" ></textarea>
                 </div>
                 <button type="submit" class="btn btn-success">Comment</button>
             </form>
@@ -62,7 +63,7 @@ endif;
         </div>
 <!--        -------------------------------------------------------------------------------------------------------->
             <div class="col-12">
-            <h2>Comments</h2>
+            <h2 class="my-4">Comments</h2>
             <div id="comments" class="comment-container">
                 <h2 class="display-3">Loading</h2>
             </div>
@@ -71,6 +72,9 @@ endif;
 
     <script>
         const commentsOutputEl = document.getElementById('comments')
+        const addCommentFormEl = document.getElementById('add-comment-form')
+
+        addCommentFormEl.addEventListener('submit', addCommentAsync) //submit veiks paspaudus ENTER
 
         fetchComments();
 
@@ -99,6 +103,22 @@ endif;
                 ${oneComment.comment_body}
             </div>
             </div>`
+        }
+
+        // prideda komentara
+        function addCommentAsync(event) {
+            event.preventDefault();  // NELEIDZIA FORMOS ISSIUSTI SU PHP
+
+            const addCommentFormData = new FormData(addCommentFormEl)
+
+
+            fetch('<?php echo URLROOT . '/api/addComment/' . $data['post']->id ?>', {
+                method: 'post',
+                body: addCommentFormData
+            }).then(response => response.text())
+            .then(data => {
+                console.log(data)
+            }). catch(error => console.error(error))
         }
     </script>
 
