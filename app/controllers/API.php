@@ -32,4 +32,23 @@ class API extends Controller
         header('Content-Type: application/json');
         echo json_encode($data);
     }
+//    ----------------------------------------------------------------------------------------
+    //GAUNAMA IS FETCH
+    public function addComment($post_id = null)
+    {
+        $result = [];
+        print_r($_POST);
+        echo 'addComment ' . $post_id;
+
+        //VALIDATE POST VALUES
+        $commentData = $_POST;//pravalytam $_POST
+
+
+        //IF VALID - ADD POST
+//        if ($this->commentModel->addCommentToDb($commentData)) return 'success';
+
+        $result['success'] = "Post added";
+        echo json_encode($result);
+        die();
+    }
 }
