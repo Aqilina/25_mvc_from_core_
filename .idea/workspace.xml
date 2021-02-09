@@ -26,8 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="controllers/Posts started">
-      <change afterPath="$PROJECT_DIR$/app/controllers/API.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../14-A-deckCards" beforeDir="false" afterPath="$PROJECT_DIR$/../14-A-deckCards" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../15-A-forma_ir_validacija" beforeDir="false" afterPath="$PROJECT_DIR$/../15-A-forma_ir_validacija" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../16-MARIUS-FORMOS-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../16-MARIUS-FORMOS-1/.idea/workspace.xml" afterDir="false" />
@@ -68,8 +66,13 @@
       <change beforePath="$PROJECT_DIR$/../24-M-blog/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../24-M-blog/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../25-M-firstMVC/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/session_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/session_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libraries/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libraries/Core.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Core.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libraries/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../26_A_lucky777_toMVC" beforeDir="false" afterPath="$PROJECT_DIR$/../26_A_lucky777_toMVC" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LoginPHP (1)" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
@@ -98,7 +101,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../25_A_laimes777" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../24-M-blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/controllers/Users.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -119,85 +122,9 @@
       <workItem from="1611917017103" duration="4717000" />
       <workItem from="1612159460619" duration="16609000" />
       <workItem from="1612179588648" duration="74241000" />
-      <workItem from="1612436768515" duration="2900000" />
-    </task>
-    <task id="LOCAL−00016" summary="setting flash msg in register controller">
-      <created>1611910136556</created>
-      <option name="number" value="LOCAL−00016" />
-      <option name="presentableId" value="LOCAL−00016" />
-      <updated>1611910136556</updated>
-    </task>
-    <task id="LOCAL−00017" summary="showing flash alerts">
-      <created>1611910185258</created>
-      <option name="number" value="LOCAL−00017" />
-      <option name="presentableId" value="LOCAL−00017" />
-      <updated>1611910185258</updated>
-    </task>
-    <task id="LOCAL−00018" summary="login method that required fields cant be empty">
-      <created>1611911205751</created>
-      <option name="number" value="LOCAL−00018" />
-      <option name="presentableId" value="LOCAL−00018" />
-      <updated>1611911205751</updated>
-    </task>
-    <task id="LOCAL−00019" summary="check in form if we have email of use. if no errors, we try to login flow.">
-      <created>1611912749505</created>
-      <option name="number" value="LOCAL−00019" />
-      <option name="presentableId" value="LOCAL−00019" />
-      <updated>1611912749505</updated>
-    </task>
-    <task id="LOCAL−00020" summary="login function to check if we have email and pass in db">
-      <created>1611914133584</created>
-      <option name="number" value="LOCAL−00020" />
-      <option name="presentableId" value="LOCAL−00020" />
-      <updated>1611914133584</updated>
-    </task>
-    <task id="LOCAL−00021" summary="tested the flow">
-      <created>1611914187728</created>
-      <option name="number" value="LOCAL−00021" />
-      <option name="presentableId" value="LOCAL−00021" />
-      <updated>1611914187728</updated>
-    </task>
-    <task id="LOCAL−00022" summary="repaired login form">
-      <created>1611914210905</created>
-      <option name="number" value="LOCAL−00022" />
-      <option name="presentableId" value="LOCAL−00022" />
-      <updated>1611914210905</updated>
-    </task>
-    <task id="LOCAL−00023" summary="fixes color">
-      <created>1612160481844</created>
-      <option name="number" value="LOCAL−00023" />
-      <option name="presentableId" value="LOCAL−00023" />
-      <updated>1612160481844</updated>
-    </task>
-    <task id="LOCAL−00024" summary="create user session method and tested">
-      <created>1612161297409</created>
-      <option name="number" value="LOCAL−00024" />
-      <option name="presentableId" value="LOCAL−00024" />
-      <updated>1612161297409</updated>
-    </task>
-    <task id="LOCAL−00025" summary="other changes">
-      <created>1612161959489</created>
-      <option name="number" value="LOCAL−00025" />
-      <option name="presentableId" value="LOCAL−00025" />
-      <updated>1612161959489</updated>
-    </task>
-    <task id="LOCAL−00026" summary="conditional navbar register/login/logout">
-      <created>1612162551547</created>
-      <option name="number" value="LOCAL−00026" />
-      <option name="presentableId" value="LOCAL−00026" />
-      <updated>1612162551547</updated>
-    </task>
-    <task id="LOCAL−00027" summary="controller/Posts and views/posts/index started">
-      <created>1612164388175</created>
-      <option name="number" value="LOCAL−00027" />
-      <option name="presentableId" value="LOCAL−00027" />
-      <updated>1612164388175</updated>
-    </task>
-    <task id="LOCAL−00028" summary="controllers/Posts started">
-      <created>1612164435429</created>
-      <option name="number" value="LOCAL−00028" />
-      <option name="presentableId" value="LOCAL−00028" />
-      <updated>1612164435429</updated>
+      <workItem from="1612436768515" duration="19207000" />
+      <workItem from="1612639417159" duration="25783000" />
+      <workItem from="1612782606727" duration="17817000" />
     </task>
     <task id="LOCAL−00029" summary="model/Posts">
       <created>1612165640198</created>
@@ -415,7 +342,85 @@
       <option name="presentableId" value="LOCAL−00064" />
       <updated>1612427558672</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL−00065" summary="adding commnets to the view/posts/show.php and control from Posts.php">
+      <created>1612505661394</created>
+      <option name="number" value="LOCAL−00065" />
+      <option name="presentableId" value="LOCAL−00065" />
+      <updated>1612505661394</updated>
+    </task>
+    <task id="LOCAL−00066" summary="started API controller">
+      <created>1612505697830</created>
+      <option name="number" value="LOCAL−00066" />
+      <option name="presentableId" value="LOCAL−00066" />
+      <updated>1612505697830</updated>
+    </task>
+    <task id="LOCAL−00067" summary="started Comment.php model">
+      <created>1612505750177</created>
+      <option name="number" value="LOCAL−00067" />
+      <option name="presentableId" value="LOCAL−00067" />
+      <updated>1612505750177</updated>
+    </task>
+    <task id="LOCAL−00068" summary="get commnets by post_id, return json format">
+      <created>1612513532549</created>
+      <option name="number" value="LOCAL−00068" />
+      <option name="presentableId" value="LOCAL−00068" />
+      <updated>1612513532549</updated>
+    </task>
+    <task id="LOCAL−00069" summary="get comments by post_id from DB in model">
+      <created>1612513593890</created>
+      <option name="number" value="LOCAL−00069" />
+      <option name="presentableId" value="LOCAL−00069" />
+      <updated>1612513593890</updated>
+    </task>
+    <task id="LOCAL−00070" summary="imported from Marius DB tables">
+      <created>1612513613970</created>
+      <option name="number" value="LOCAL−00070" />
+      <option name="presentableId" value="LOCAL−00070" />
+      <updated>1612513613971</updated>
+    </task>
+    <task id="LOCAL−00071" summary="fetching comments and rendering in view">
+      <created>1612515789081</created>
+      <option name="number" value="LOCAL−00071" />
+      <option name="presentableId" value="LOCAL−00071" />
+      <updated>1612515789081</updated>
+    </task>
+    <task id="LOCAL−00072" summary="html form to add comment">
+      <created>1612517240636</created>
+      <option name="number" value="LOCAL−00072" />
+      <option name="presentableId" value="LOCAL−00072" />
+      <updated>1612517240636</updated>
+    </task>
+    <task id="LOCAL−00073" summary="required fields fetch. add commentsAsynch function">
+      <created>1612764474379</created>
+      <option name="number" value="LOCAL−00073" />
+      <option name="presentableId" value="LOCAL−00073" />
+      <updated>1612764474380</updated>
+    </task>
+    <task id="LOCAL−00074" summary="api controller method addComment in progress.tested and working">
+      <created>1612764753525</created>
+      <option name="number" value="LOCAL−00074" />
+      <option name="presentableId" value="LOCAL−00074" />
+      <updated>1612764753525</updated>
+    </task>
+    <task id="LOCAL−00075" summary="addCommentAsynch json">
+      <created>1612769237114</created>
+      <option name="number" value="LOCAL−00075" />
+      <option name="presentableId" value="LOCAL−00075" />
+      <updated>1612769237114</updated>
+    </task>
+    <task id="LOCAL−00076" summary="api addComment method errors and success">
+      <created>1612769271464</created>
+      <option name="number" value="LOCAL−00076" />
+      <option name="presentableId" value="LOCAL−00076" />
+      <updated>1612769271464</updated>
+    </task>
+    <task id="LOCAL−00077" summary="handle success when comment added">
+      <created>1612770070367</created>
+      <option name="number" value="LOCAL−00077" />
+      <option name="presentableId" value="LOCAL−00077" />
+      <updated>1612770070367</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,19 +451,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added show method and load view" />
-    <MESSAGE value="function get post by id returns post row" />
-    <MESSAGE value="single post view in progress" />
-    <MESSAGE value="show view with current datya" />
-    <MESSAGE value="included user model to post controller" />
-    <MESSAGE value="created getUserById method" />
-    <MESSAGE value="show single post in progress" />
-    <MESSAGE value="show edit and delete only if post belongs to current user" />
-    <MESSAGE value="edit method with validation and correct data flow" />
-    <MESSAGE value="created updatePost method" />
-    <MESSAGE value="add post_id to $data" />
-    <MESSAGE value="edit post view" />
-    <MESSAGE value="other small changes" />
     <MESSAGE value="fix: add id to action of delete form" />
     <MESSAGE value="Created validation class + ifrequestIsPost() method" />
     <MESSAGE value="created method deletePost()" />
@@ -471,32 +463,47 @@
     <MESSAGE value="users.php uses new beautiful tested validation logic" />
     <MESSAGE value="validateEmpty() and validateLoginEmail() methods" />
     <MESSAGE value="using refactored vld methods in users controller login method" />
-    <option name="LAST_COMMIT_MESSAGE" value="using refactored vld methods in users controller login method" />
+    <MESSAGE value="adding commnets to the view/posts/show.php and control from Posts.php" />
+    <MESSAGE value="started API controller" />
+    <MESSAGE value="started Comment.php model" />
+    <MESSAGE value="get commnets by post_id, return json format" />
+    <MESSAGE value="get comments by post_id from DB in model" />
+    <MESSAGE value="imported from Marius DB tables" />
+    <MESSAGE value="fetching comments and rendering in view" />
+    <MESSAGE value="html form to add comment" />
+    <MESSAGE value="required fields fetch. add commentsAsynch function" />
+    <MESSAGE value="api controller method addComment in progress.tested and working" />
+    <MESSAGE value="addCommentAsynch json" />
+    <MESSAGE value="api addComment method errors and success" />
+    <MESSAGE value="handle success when comment added" />
+    <option name="LAST_COMMIT_MESSAGE" value="handle success when comment added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="-756" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612256361985">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
     <state x="880" y="-756" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612256361985" />
-    <state x="969" y="-870" width="749" height="668" key="CommitChangelistDialog2" timestamp="1612427558090">
+    <state x="1353" y="-751" width="749" height="668" key="CommitChangelistDialog2" timestamp="1612770069535">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
     <state x="969" y="-870" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612427558090" />
     <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611906439934" />
-    <state x="1353" y="-751" width="749" height="668" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612259997722" />
-    <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611914210326" />
-    <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog" timestamp="1612426833840">
+    <state x="1353" y="-751" width="749" height="668" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612770069535" />
+    <state x="827" y="-977" key="CommitChangelistDialog2/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612505749645" />
+    <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog" timestamp="1612523154188">
       <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
     <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612426833840" />
     <state x="631" y="-976" width="1024" height="539" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611908313783" />
+    <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612523154188" />
     <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612352610439" />
-    <state x="982" y="-819" key="FileChooserDialogImpl" timestamp="1612436788888">
-      <screen x="531" y="-1080" width="1920" height="1040" />
+    <state x="301" y="171" key="FileChooserDialogImpl" timestamp="1612817522556">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612436788888" />
     <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815326597" />
-    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612256351367" />
+    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612773037737" />
+    <state x="301" y="171" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.999@0.0.1280.680" timestamp="1612817522556" />
     <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612358813580" />
     <state x="872" y="-835" key="NewPhpClassDialog" timestamp="1612430826493">
       <screen x="531" y="-1080" width="1920" height="1040" />
@@ -509,10 +516,16 @@
     <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612430555118" />
     <state x="1010" y="-649" key="NewPhpFileDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611906816908" />
     <state x="1010" y="-631" key="NewPhpFileDialog/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612256369682" />
-    <state x="1566" y="-920" width="698" height="880" key="find.popup" timestamp="1612419108082">
-      <screen x="531" y="-1080" width="1920" height="1040" />
+    <state x="43" y="146" width="1237" height="534" key="find.popup" timestamp="1612816167610">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="1566" y="-920" width="698" height="880" key="find.popup/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612419108082" />
+    <state x="44" y="7" width="1236" height="577" key="find.popup/0.0.1280.680/1066.-1080.1536.783@0.0.1280.680" timestamp="1612722815871" />
+    <state x="1118" y="-764" width="1484" height="357" key="find.popup/0.0.1280.680/1066.-1080.1536.783@1066.-1080.1536.783" timestamp="1612729207708" />
+    <state x="44" y="7" width="1236" height="577" key="find.popup/0.0.1280.680/1066.-1080.1536.824@0.0.1280.680" timestamp="1612654780471" />
+    <state x="1894" y="-954" width="559" height="698" key="find.popup/0.0.1280.680/1066.-1080.1536.824@1066.-1080.1536.824" timestamp="1612648583618" />
+    <state x="596" y="-664" width="1855" height="624" key="find.popup/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612785007938" />
+    <state x="43" y="146" width="1237" height="534" key="find.popup/0.0.1280.680/531.-1080.1920.999@0.0.1280.680" timestamp="1612816167610" />
     <state x="1566" y="-926" width="698" height="845" key="find.popup/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612357956281" />
     <state x="783" y="-325" key="run.anything.popup" timestamp="1611905229490">
       <screen x="531" y="-1080" width="1920" height="999" />
@@ -539,6 +552,24 @@
             <option name="methodName" value="add" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/controllers/Posts.php</url>
+          <line>105</line>
+          <properties>
+            <option name="className" value="\Posts" />
+            <option name="methodName" value="edit" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/libraries/Validation.php</url>
+          <line>20</line>
+          <properties>
+            <option name="className" value="\Validation" />
+            <option name="methodName" value="ifRequestIsPostAndSanitize" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,7 +8,7 @@ class Controller
     public function model($model)
     {
         if (file_exists('../app/models/' . $model . '.php')) {
-            // require model file
+            // require model file. nurodoma direktorija
             require_once '../app/models/' . $model . '.php';
 
             //Make object of that class

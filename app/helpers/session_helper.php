@@ -8,6 +8,8 @@ session_start();
 //example save msg flash('register_success', 'Your registrations is successful');
 //for display flash('register_success'); - nuskaitymui
 
+
+//ATVAIZDUOJA SEKMES, NESEKMES ZINUTES
 function flash($name = '', $message = '', $class = 'alert alert-success')
 {
     if (!empty($name)) {
@@ -32,7 +34,7 @@ function flash($name = '', $message = '', $class = 'alert alert-success')
         }
     }
 }
-
+//-----------------------------------------------------------------------------------------------------------------------
 //checks if user is logged in
 //@returns boolean
 function isLoggedIn()

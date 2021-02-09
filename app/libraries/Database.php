@@ -28,8 +28,8 @@ class Database
 
         // set some connection options
         $options = [
-            PDO::ATTR_PERSISTENT => true,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_PERSISTENT => true, //paziuri ar dar neatsijungta nuo DB, tai panaudos ta pati
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, //klaidas matysim exception metodu - try-catch blokas
         ];
 
         // create PDO instance 

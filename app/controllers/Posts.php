@@ -80,7 +80,6 @@ class Posts extends Controller //from libraries
                 'titleErr' => '',
                 'bodyErr' => ''
             ];
-
             $this->view('posts/add', $data);
         }
     }
@@ -145,7 +144,7 @@ class Posts extends Controller //from libraries
 //                load view with errors
                 $this->view('posts/edit', $data);
             }
-
+//--------------------------------------------------------------------------------------------
         } else {
             //user entered this page
             $post = $this->postModel->getPostById($id);

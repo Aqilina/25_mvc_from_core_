@@ -7,6 +7,7 @@ define('DB_NAME', 'copied_mvc_from_core');
 
 // aprrot wil be used when we need absloute path to our app dir
 define('APPROOT', dirname(dirname(__FILE__)));
+//g.b. dirname(__DIR__)
 
 // URL ROOT will be the path in the url
 define('URLROOT', 'http://localhost/php/25_mvc_from_core');
