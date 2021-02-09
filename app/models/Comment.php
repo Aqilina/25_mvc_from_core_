@@ -13,7 +13,7 @@ class Comment
 //    KIEKV KARTA, SIUNCIANT KOMENTARA, VYKDOMA SITA F-JA
     public function getMeComments($post_id)
     {
-        $this->db->query('SELECT * FROM comments WHERE post_id = :id');
+        $this->db->query('SELECT * FROM comments WHERE post_id = :id ORDER BY created_at DESC ');
 
         //PRIBAINDINTI ID
         $this->db->bind(':id', $post_id );
