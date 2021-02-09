@@ -65,7 +65,7 @@ endif;
                               placeholder="Write your comment"></textarea>
                     <span class='invalid-feedback'></span>
                 </div>
-                <button type="submit" class="btn btn-success">Comment</button>
+                <button type="submit" class="btn btn-success" id="submitBtn">Comment</button>
             </form>
 
         </div>
@@ -83,9 +83,13 @@ endif;
         const addCommentFormEl = document.getElementById('add-comment-form')
         const commentBodyEl = document.getElementById('comment-body')
         const usernameInputEl = document.getElementById('username')
+        const submitBtnEl = document.getElementById('submitBtn')
 
 
         addCommentFormEl.addEventListener('submit', addCommentAsync) //submit veiks paspaudus ENTER
+        //PASIDARYT, KAD KAI ABU ELEMENTAI TRUE, TADA LEISTI KOMENTUOTI
+        commentBodyEl.addEventListener('input', clearErrorsOnInput) //
+        usernameInputEl.addEventListener('input', clearErrorsOnInput) //
 
         fetchComments();
 
@@ -152,6 +156,8 @@ endif;
         function handleCommentError(errorObj) {
             console.log(errorObj)
 
+            submitBtnEl.setAttribute('disabled', '');
+
             if (errorObj.commentBodyErr) {
                 commentBodyEl.classList.add('is-invalid')
                 //add error text
@@ -174,6 +180,15 @@ endif;
         }
 
         //------------------------------------------------------------------------------------------------------------------
+        //if input length is 2 or more chars - we remove error class
+        function clearErrorsOnInput(event) {
+            const stringLength = event.target.value.length
+            if (stringLength > 1) {
+                event.target.classList.remove('is-invalid')
+                submitBtnEl.removeAttribute('disabled')
+            }
+        }
+
     </script>
 
 
