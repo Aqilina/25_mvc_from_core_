@@ -54,18 +54,29 @@
 
     //get value and send it to validation
         console.log(e.target.value);
-        const inputValue = e.target.value;
 
-        sendAjaxPost(url, data) 
+        //is e.target.value gautos reiksmes:
+        const inputValue = e.target.value;
+        const inputName = e.target.name
+        const inputData = new FormData();
+        
+        inputData.append(inputName, inputValue)
+
+        sendAjaxPost('<?php echo URLROOT?>/api/validate/'+inputName, inputData) 
+    
     }
 
-    // function sendAjaxPost('api/va') {
-
-    // }
+    function sendAjaxPost(url, myFormData) {
+        fetch(url, {
+            method: 'post',
+            body: myFormData
+        }).then(resp => resp.text()).then(data => {
+            console.log(data);
+        }).catch(err => console.error(err));
+    }
     
 
     </script>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
-
 

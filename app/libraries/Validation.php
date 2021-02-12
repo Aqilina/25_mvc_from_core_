@@ -43,6 +43,16 @@ class Validation
 
 //-------------------------------------------------------------------------------------------------------------
 //    PAVALIDUOTI TUSCIA LAUKA - RETURN MESSAGE, else - return empty string
+
+/**
+ * validate empty field
+ *
+ * @param array $data
+ * @param string $field
+ * @param string $fieldDisplayName
+ * @return void
+ */
+
     public function ifEmptyFieldWithReference(&$data, $field, $fieldDisplayName)
     {
         $fieldError = $field . 'Err';

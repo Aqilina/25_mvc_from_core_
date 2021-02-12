@@ -34,6 +34,7 @@ class API extends Controller
     }
 //    ----------------------------------------------------------------------------------------
     //GAUNAMA IS FETCH
+
     public function addComment($post_id = null)
     {
 
@@ -104,4 +105,16 @@ class API extends Controller
         echo json_encode($result);
         die();
     }
+
+
+    public function validate($inputField) {
+       
+        $vld = new Validation;
+        
+        print_r($_POST);
+        echo $inputField . '<br>';
+        $input = $_POST[$inputField];
+        die('hello from validate');
+        }
+  
 }
