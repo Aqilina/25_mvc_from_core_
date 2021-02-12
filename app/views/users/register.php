@@ -42,4 +42,9 @@
         </div>
     </div>
 
+
+    <script>
+    console.log('its alive');
+    </script>
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>

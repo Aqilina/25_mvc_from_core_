@@ -16,10 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="controllers/Posts started">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Post.php" afterDir="false" />
-    </list>
+    <list default="true" id="6bfb9441-5d1b-442d-9f6c-2c58f1f01f67" name="Default Changelist" comment="controllers/Posts started" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +40,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_share_GitHub" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/app/controllers/Users.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -73,6 +70,7 @@
       <workItem from="1612986361317" duration="760000" />
       <workItem from="1613043179090" duration="5484000" />
       <workItem from="1613111233105" duration="134000" />
+      <workItem from="1613114422626" duration="63000" />
     </task>
     <task id="LOCAL−00032" summary="generate post cards in the view">
       <created>1612170099286</created>
@@ -445,13 +443,13 @@
     <state x="631" y="-976" width="1024" height="539" key="DiffContextDialog/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611908313783" />
     <state x="524" y="-972" width="1928" height="799" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612523154188" />
     <state x="631" y="-976" width="1024" height="539" maximized="true" key="DiffContextDialog/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612352610439" />
-    <state x="301" y="171" key="FileChooserDialogImpl" timestamp="1613047479743">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="982" y="-819" key="FileChooserDialogImpl" timestamp="1613114483037">
+      <screen x="531" y="-1080" width="1920" height="1040" />
     </state>
     <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612436788888" />
     <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.639/531.-1080.1920.999@531.-1080.1920.999" timestamp="1611815326597" />
     <state x="301" y="171" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@0.0.1280.680" timestamp="1613047479743" />
-    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1612773037737" />
+    <state x="982" y="-819" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.1040@531.-1080.1920.1040" timestamp="1613114483037" />
     <state x="301" y="171" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.999@0.0.1280.680" timestamp="1612817522556" />
     <state x="982" y="-829" key="FileChooserDialogImpl/0.0.1280.680/531.-1080.1920.999@531.-1080.1920.999" timestamp="1612862106572" />
     <state x="872" y="-835" key="NewPhpClassDialog" timestamp="1612430826493">
