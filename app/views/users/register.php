@@ -44,7 +44,28 @@
 
 
     <script>
-    console.log('its alive');
+   //ADD ELEMENTS
+    const nameInputEl = document.getElementById('name');
+   
+    nameInputEl.addEventListener('blur', handleInput);
+
+    function handleInput(e) {
+            console.log('blur happened');
+
+    //get value and send it to validation
+        console.log(e.target.value);
+        const inputValue = e.target.value;
+
+        sendAjaxPost(url, data) 
+    }
+
+    // function sendAjaxPost('api/va') {
+
+    // }
+    
+
     </script>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
+
+
